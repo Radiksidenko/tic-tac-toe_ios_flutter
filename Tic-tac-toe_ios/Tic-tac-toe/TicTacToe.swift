@@ -152,16 +152,6 @@ extension TicTacToe {
         return isMax ? score.max : score.min
     }
     
-    enum Difficulty: String, CaseIterable, Identifiable {
-        case easy
-        
-        case medium
-        
-        case hard
-        
-        var id: Self { self }
-    }
-    
     mutating func playOne() -> Int? {
         
         guard isOngoing else { return nil }

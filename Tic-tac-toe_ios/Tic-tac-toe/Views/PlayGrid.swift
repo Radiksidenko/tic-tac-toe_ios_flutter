@@ -57,7 +57,7 @@ struct PlayGrid: View {
     private func onClick(at index: Int) {
         Task {
             game.play(at: index)
-            if isPVE, let indexAI = game.playAI(difficulty: .medium) {
+            if isPVE, let indexAI = game.playOne() {
                 game.play(at: indexAI)
             }
         }
